@@ -1,0 +1,62 @@
+.color-green{
+  color: green;
+  font-size: 20px;
+}
+
+/* Estilo do texto de controle de fluxo */
+.control-flow-text {
+  font-size: 1.5em;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título "Angular 16" */
+.section-title {
+  font-size: 2em;
+  text-align: center;
+  color: #2980b9;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o contêiner de "mostrar está como true" */
+.show-container {
+  text-align: center;
+  font-size: 1.2em;
+  color: #27ae60;
+  background-color: #ecfdf2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Estilo para o texto "mostrar está como true" */
+.show-message {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para a cor verde */
+.color-green-text {
+  font-size: 1.5em;
+  text-align: center;
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Estilo para o texto "A cor não é verde" */
+.not-green-text {
+  font-size: 1.5em;
+  text-align: center;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 20px;
+}

@@ -1,0 +1,35 @@
+<section class="interpolation-flow-text">
+<p class="intro-text">interpolation works!</p>
+
+<!-- Exibindo variáveis -->
+<div class="info-container">
+  <p class="info">Nome: {{ name }}</p>
+  <p class="info">Idade: {{ age }}, {{ job }}</p>
+</div>
+
+<!-- Seção do Objeto -->
+<h2 class="section-title">Objeto</h2>
+<div class="info-container">
+  <p class="info">Marca: {{ car.make }}</p>
+  <p class="info">Modelo: {{ car.model }}</p>
+</div>
+
+<!-- Seção de Arrays -->
+<div class="section-title">
+  <h2>Acessando Arrays</h2>
+  <p class="hobby-item">{{ hobbies[0] }}</p>
+</div>
+
+<p class="hobby-list-title">Acessando todos os itens do array com o ngFor</p>
+<!-- Lista de hobbies -->
+<ul *ngIf="hobbies.length > 0;" class="hobby-list">
+  <li *ngFor="let hobby of hobbies" class="hobby-item">{{ hobby }}</li>
+</ul>
+
+<!-- Imagem com binding -->
+<div class="image-container">
+  <img src="{{ imageUrl }}" alt="Anakin Skywalker" class="styled-image">
+  <img [src]="imageUrl" alt="Anakin Skywalker" class="styled-image">
+</div>
+<p class="image-title">binding do angular</p>
+</section>

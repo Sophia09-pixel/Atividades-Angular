@@ -1,0 +1,44 @@
+<!-- Texto de controle de fluxo -->
+<section class="control-flow-text">
+  <p>control-flow works!</p>
+
+  <h2 class="section-title">Angular 16</h2>
+
+  <div *ngIf="mostrar">
+    <p class="show-message">mostrar está como true</p>
+  </div>
+
+  <h2 *ngIf="color === 'green'" class="color-green-text">Cor Verde!</h2>
+
+  <h2 *ngIf="color !== 'green'" class="not-green-text">A cor não é verde!</h2>
+
+  <p *ngFor="let cor of cores">{{cor}}</p>
+
+  <!-- switch -->
+  <label for="selector">Selecione um valor:</label>
+  <select id="selector" (change)="trocarValor($event)">
+    <option value="um">Um</option>
+    <option value="dois">Dois</option>
+    <option value="tres">Três</option>
+  </select>
+
+  <div [ngSwitch]="itemSelecionado">
+    <p *ngSwitchCase="'um'">Você selecionou um</p>
+    <p *ngSwitchCase="'dois'">Você selecionou dois</p>
+    <p *ngSwitchCase="'tres'">Você selecionou três</p>
+  </div>
+
+  @switch (mes) {
+    @case (1){
+      <p>Janeiro</p>
+    }
+
+    @case (2){
+      <p>Fevereiro</p>
+    }
+
+    @default {
+      <p>Mês não encontrado</p>
+    }
+  }
+</section>
