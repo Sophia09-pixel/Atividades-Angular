@@ -1,0 +1,29 @@
+<div class="interpolation-flow-text">
+
+  <p class="intro-text">diretiva works!</p>
+  <p [ngClass]="{'errorClass' : hasError}"> Sophia Sousa</p>
+  <h2 [ngClass]="classes">3SIS 2025</h2>
+  <div [ngClass]="!isSpecial ? 'special' : 'teste' ">
+    <p>é especial</p>
+  </div>
+
+  <h2> Diretiva ngStyle</h2>
+  <p [ngStyle]="{'background-color' : color, 'font-size' : size, 'color' : 'red'}">Teste</p>
+
+  <h2>ngModel</h2>
+  <label for="exemplo-ngModel">Exemplo ngModel</label>
+  <p>Sem UpperCase:
+    <input [(ngModel)]="currentItem.name" id="name">
+  </p>
+
+  <div class="info-container">
+    <p>Campo: {{currentItem.name}}</p>
+  </div>
+
+  <p>
+    Com UpperCase:
+    <input type="text" [ngModel]="currentItem.name"
+    (ngModelChange)="setUpperCaseName($event)"
+    id="name2">
+  </p>
+</div>

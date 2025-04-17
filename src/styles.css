@@ -1,1 +1,180 @@
 /* You can add global styles to this file, and also import other style files */
+/* Estilo para o texto de introdução */
+.intro-text {
+  font-size: 1.5em;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.interpolation-flow-text {
+  font-size: 1.5em;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contêiner de informações */
+.info-container {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo para os parágrafos de informações */
+.info {
+  font-size: 1.2em;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Títulos das seções */
+.section-title {
+  font-size: 2em;
+  text-align: center;
+  color: #2e3a59;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para itens individuais de hobbies */
+.hobby-item {
+  font-size: 1.1em;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* Estilo para a lista de hobbies */
+.hobby-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título da lista de hobbies */
+.hobby-list-title {
+  font-size: 1.2em;
+  color: #444;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Estilo da imagem com class */
+.styled-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título da imagem */
+.image-title {
+  font-size: 1.2em;
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Contêiner para as imagens, utilizando flexbox */
+.image-container {
+  display: flex;
+  justify-content: center; /* Alinha as imagens no centro */
+  gap: 20px; /* Espaço entre as imagens */
+  margin-bottom: 20px;
+}
+
+/* Estilo das imagens */
+.styled-image {
+  width: 45%; /* As imagens vão ocupar 45% do espaço cada uma */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do texto acima da segunda imagem */
+.image-title {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.color-green{
+  color: green;
+  font-size: 20px;
+}
+
+/* Estilo do texto de controle de fluxo */
+.control-flow-text {
+  font-size: 1.5em;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título "Angular 16" */
+.section-title {
+  font-size: 2em;
+  text-align: center;
+  color: #2980b9;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o contêiner de "mostrar está como true" */
+.show-container {
+  text-align: center;
+  font-size: 1.2em;
+  color: #27ae60;
+  background-color: #ecfdf2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Estilo para o texto "mostrar está como true" */
+.show-message {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para a cor verde */
+.color-green-text {
+  font-size: 1.5em;
+  text-align: center;
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Estilo para o texto "A cor não é verde" */
+.not-green-text {
+  font-size: 1.5em;
+  text-align: center;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 20px;
+}
