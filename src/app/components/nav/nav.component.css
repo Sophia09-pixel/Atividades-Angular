@@ -1,0 +1,31 @@
+/* Estilizando a navbar */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #333;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilizando os itens da navbar */
+.navbar li {
+  margin: 0 20px;
+}
+
+/* Estilizando os links */
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
