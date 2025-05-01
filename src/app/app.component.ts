@@ -7,11 +7,13 @@ import { DiretivaComponent } from './components/diretiva/diretiva.component';
 import { Carros } from './interfaces/Carros';
 import { CommonModule } from '@angular/common';
 import { ClienteComponent } from './components/cliente/cliente.component';
+import { HomeComponent } from './home/home.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, InterpolationComponent, ControlFlowComponent, PropertieBindingComponent, DiretivaComponent, CommonModule, ClienteComponent],
+  imports: [RouterOutlet, NavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
