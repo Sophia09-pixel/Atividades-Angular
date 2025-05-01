@@ -8,12 +8,13 @@
       <label for="telefone">Telefone:</label>
       <input type="text" id="telefone" formControlName="telefone" class="form-input" />
     </div>
-    <button type="submit" class="submit-btn">Salvar</button>
+    <button type="submit" class="submit-btn">
+      {{clienteIdEdicao ? "Atualizar" : "Cadastrar"}}
+    </button>
   </form>
 
   <hr>
 
-  <p class="intro-text">cliente works!</p>
   <h2 class="page-title">Lista de clientes</h2>
 
   <table class="cliente-table">
@@ -29,7 +30,8 @@
         <td class="table-data">{{cli.nome}}</td>
         <td class="table-data">{{cli.telefone}}</td>
         <td class="table-actions">
-          <input type="button" value="Editar" class="action-btn" />
+          <input type="button" (click)="editar(cli.id)" value="Editar" class="action-btn" />
+          <input type="button" (click)="remover(cli.id)" value="Remover" class="action-btn-remove" />
         </td>
       </tr>
     </tbody>

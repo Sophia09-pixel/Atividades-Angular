@@ -93,11 +93,23 @@
 
 .table-actions {
   padding: 12px 15px;
+  margin: 10px;
   text-align: center;
 }
 
 .action-btn {
   background-color: #2ecc71;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn-remove {
+  background-color: red;
   border: none;
   color: white;
   padding: 8px 12px;
