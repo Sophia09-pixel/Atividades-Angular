@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common'; //importar o módulo Comm
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'; //importar o módulo Fo
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms'; //importar o módulo Fo
 import { Clientes } from '../../interfaces/Clientes'; //importar a interface Cliente
 import { ClienteService } from './../../services/cliente.service';
 
@@ -9,12 +14,12 @@ import { ClienteService } from './../../services/cliente.service';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './cliente.component.html',
-  styleUrl: './cliente.component.css'
+  styleUrl: './cliente.component.css',
 })
 export class ClienteComponent {
-  clienteForm: FormGroup = new FormGroup({})
-  cliente: Clientes[] = [];
-  clienteIdEdicao: string | null = null
+  clienteForm: FormGroup = new FormGroup({});
+  clientes: Clientes[] = [];
+  clienteIdEdicao: string | null = null;
 
   ngOnInit(): void {
     this.list();
@@ -26,16 +31,17 @@ export class ClienteComponent {
   ) {
     this.clienteForm = formBuilder.group({
       nome: ['', Validators.required],
-      telefone: ['']
+      telefone: [''],
     });
   }
 
   list(): void {
-    this.cliente = this.clienteService.list();
+    this.clienteService.list().subscribe((response) => (this.clientes = response));
   }
 
   generateRandomString(length: number): string {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     const charactersLength = characters.length;
     for (let i = 0; i < length; i++) {
@@ -52,24 +58,22 @@ export class ClienteComponent {
         const clienteUpdate: Clientes = {
           id: this.clienteIdEdicao,
           nome: formData.nome,
-          telefone: formData.telefone
-        }
+          telefone: formData.telefone,
+        };
         this.clienteService.update(this.clienteIdEdicao, clienteUpdate);
-        alert("Alterado com sucesso!")
-
+        alert('Alterado com sucesso!');
       } else {
         const clienteAdd: Clientes = {
           id: this.generateRandomString(6),
           nome: formData.nome,
-          telefone: formData.telefone
+          telefone: formData.telefone,
         };
 
         this.clienteService.add(clienteAdd);
-        alert("cliente inserido com successo!")
+        alert('cliente inserido com successo!');
       }
-
     } else {
-      alert('Formulário inválido!')
+      alert('Formulário inválido!');
     }
 
     this.clienteForm.reset();
@@ -77,16 +81,16 @@ export class ClienteComponent {
 
   editar(id: string) {
     // buscando todos os clientes e filtrando pelo id enviado como parametro
-    const cliente = this.clienteService.list().find(cli => cli.id == id);
-    console.log(cliente);
+    // const cliente = this.clienteService.list().find((cli) => cli.id == id);
+    // console.log(cliente);
 
-    if (cliente) {
-      this.clienteIdEdicao = cliente.id;
-      this.clienteForm.patchValue({
-        nome: cliente.nome,
-        telefone: cliente.telefone
-      })
-    }
+    // if (cliente) {
+    //   this.clienteIdEdicao = cliente.id;
+    //   this.clienteForm.patchValue({
+    //     nome: cliente.nome,
+    //     telefone: cliente.telefone,
+    //   });
+    // }
   }
 
   remover(id: string) {

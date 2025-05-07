@@ -1,0 +1,32 @@
+{
+  "clientes": [
+    {
+      "id": "ddsaf",
+      "nome": "Deborah Aarão"
+    },
+    {
+      "id": "4",
+      "nome": "Sophia",
+      "telefone": "12345976"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Eletrônicos",
+      "descricao": "Dispositivos eletrônicos e gadgets",
+      "ativa": true
+    },
+    {
+      "id": 2,
+      "nome": "Moda",
+      "descricao": "Roupas e acessórios",
+      "ativa": true
+    },
+    {
+      "id": 3,
+      "nome": "Livros",
+      "ativa": false
+    }
+  ]
+}
