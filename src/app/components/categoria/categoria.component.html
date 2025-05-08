@@ -1,0 +1,27 @@
+<div class="font-component">
+  <h2 class="page-title">Lista de Categoria</h2>
+
+  <table class="cliente-table">
+    <thead>
+      <tr>
+        <th class="table-header">Id</th>
+        <th class="table-header">Nome</th>
+        <th class="table-header">Descricao</th>
+        <th class="table-header">Ativo</th>
+        <th class="table-header">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-row" *ngFor="let cat of categorias">
+        <td class="table-data">{{cat.id}}</td>
+        <td class="table-data">{{cat.nome}}</td>
+        <td class="table-data">{{cat.descricao}}</td>
+        <td class="table-data">{{cat.ativa}}</td>
+        <td class="table-actions">
+          <input type="button" value="Editar" class="action-btn"/>
+          <input type="button" value="Remover" class="action-btn-remove"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

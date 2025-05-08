@@ -4,6 +4,7 @@ import { ClienteComponent } from './components/cliente/cliente.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ProdutoDetalheComponent } from './components/produto-detalhe/produto-detalhe.component';
+import { CategoriaComponent } from './components/categoria/categoria.component';
 
 export const routes: Routes = [
   {
@@ -13,6 +14,10 @@ export const routes: Routes = [
   {
     path : 'cliente',
     component: ClienteComponent
+  },
+  {
+    path: 'categoria',
+    component: CategoriaComponent
   },
   {
     path : 'control-flow',
