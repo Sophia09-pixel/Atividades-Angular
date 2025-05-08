@@ -69,7 +69,7 @@ export class ClienteComponent {
           telefone: formData.telefone,
         };
 
-        this.clienteService.add(clienteAdd);
+        this.clienteService.add(clienteAdd).subscribe();
         alert('cliente inserido com successo!');
       }
     } else {
@@ -77,6 +77,7 @@ export class ClienteComponent {
     }
 
     this.clienteForm.reset();
+    this.list();
   }
 
   editar(id: string) {

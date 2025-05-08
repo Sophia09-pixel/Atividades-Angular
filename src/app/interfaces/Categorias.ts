@@ -1,6 +1,6 @@
 export interface Categorias{
-  id: number
+  id: string
   nome: string
   descricao?: string
-  ativa: boolean
+  ativa?: boolean
 }
